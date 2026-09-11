@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Her ❤️</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background">
+        <div class="floating-hearts" id="floatingHearts"></div>
+        <div class="sparkles" id="sparkles"></div>
+    </div>
+
+    <!-- Photo-by-photo zoom experience -->
+    <div class="zoom-track" id="zoomTrack" aria-label="Photo memories">
+        <div class="zoom-stage" data-index="0"><div class="zoom-image-wrapper"><img src="imgs/Img1.png" alt="Memory 1" class="zoom-image"></div><div class="zoom-overlay"></div><div class="zoom-caption"><span>01</span><p>Our first memory together 💖</p></div></div>
+        <div class="zoom-stage" data-index="1"><div class="zoom-image-wrapper"><img src="imgs/Img2.png" alt="Memory 2" class="zoom-image"></div><div class="zoom-overlay"></div><div class="zoom-caption"><span>02</span><p>The moment I knew you were special ✨</p></div></div>
+        <div class="zoom-stage" data-index="2"><div class="zoom-image-wrapper"><img src="imgs/Img3.png" alt="Memory 3" class="zoom-image"></div><div class="zoom-overlay"></div><div class="zoom-caption"><span>03</span><p>Adventures we've shared 🌟</p></div></div>
+        <div class="zoom-stage" data-index="3"><div class="zoom-image-wrapper"><img src="imgs/Img4.png" alt="Memory 4" class="zoom-image"></div><div class="zoom-overlay"></div><div class="zoom-caption final-caption"><span>04</span><p>And so many more to come… 💕</p></div></div>
+    </div>
+
+    <!-- Page 1: Intro & Question (centered, no scroll) -->
+    <main class="page page-center" id="pageIntro">
+        <section class="screen active" id="introScreen">
+            <div class="content-card">
+                <div class="logo">💕</div>
+                <h1 class="title">Before we begin…</h1>
+                <p class="subtitle">prove you're <span class="her-name">birthday girl</span></p>
+                <button class="btn btn-primary" id="startBtn">Begin</button>
+            </div>
+        </section>
+
+        <section class="screen" id="questionScreen">
+            <div class="content-card question-card">
+                <div class="question-number">Question 1 of 1</div>
+                <h2 class="question-text">What nickname do I call you?</h2>
+                <div class="text-input-wrapper">
+                    <input type="text" id="nicknameInput" class="text-input" placeholder="Type your answer..." autocomplete="off" spellcheck="false">
+                    <button class="btn btn-submit" id="submitBtn">Submit</button>
+                </div>
+                <p class="error-message" id="answerError">That's not it… try again 💔</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Photo scroll page -->
+    <div class="page page-scroll" id="pageZoomScroll">
+        <div class="photo-scroll-spacer" id="scrollSpacer" aria-hidden="true"></div>
+        <div class="scroll-progress" id="scrollProgress"><span class="progress-current" id="progressCurrent">01</span><span class="progress-line"><i id="progressFill"></i></span><span>04</span></div>
+        <div class="scroll-hint" id="scrollHint"><span>Scroll to discover</span><div class="mouse-wheel"><div class="wheel"></div></div></div>
+        <section class="gallery-section" id="gallerySection"><h2 class="gallery-title">Our Gallery 💝</h2><div class="gallery-grid" id="galleryGrid"></div></section>
+    </div>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image gallery">
+        <button class="lightbox-close" aria-label="Close">&times;</button>
+        <button class="lightbox-nav lightbox-prev" aria-label="Previous">&#8249;</button>
+        <img src="" alt="">
+        <button class="lightbox-nav lightbox-next" aria-label="Next">&#8250;</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
